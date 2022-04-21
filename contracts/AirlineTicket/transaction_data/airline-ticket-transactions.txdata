@@ -1,0 +1,44 @@
+[
+    {
+        "transactionName": "airlineTicketExists",
+        "transactionLabel": "A test airlineTicketExists transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "createAirlineTicket",
+        "transactionLabel": "A test createAirlineTicket transaction",
+        "arguments": [
+            "001",
+            "some value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "readAirlineTicket",
+        "transactionLabel": "A test readAirlineTicket transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "updateAirlineTicket",
+        "transactionLabel": "A test updateAirlineTicket transaction",
+        "arguments": [
+            "001",
+            "some other value"
+        ],
+        "transientData": {}
+    },
+    {
+        "transactionName": "deleteAirlineTicket",
+        "transactionLabel": "A test deleteAirlineTicket transaction",
+        "arguments": [
+            "001"
+        ],
+        "transientData": {}
+    }
+]
