@@ -1,0 +1,6 @@
+{
+    "connection_file": "./organizations/org2msp_profile.json",
+    "orgMSPID": "org2msp",
+    "userName": "user1",
+    "gatewayDiscovery": { "enabled": true, "asLocalhost": false }
+}

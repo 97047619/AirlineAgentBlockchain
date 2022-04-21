@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <th>Ticket ID</th>
+    <th>Depart</th>
+    <th>Arrive</th>
+    <th>Owner</th>
+    <th>Price</th>
+    <th>Status</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of tickets">
+      <td>{{item.ID}}</td>
+      <td>{{item.Depart}}</td>
+      <td>{{item.Arrive}}</td>
+      <td>{{item.Owner | slice:78:84}}</td>
+      <td>{{item.Price}}</td>
+      <td>{{item.Status | slice:0:10}}</td>
+    </tr>
+  </tbody>
+</table>

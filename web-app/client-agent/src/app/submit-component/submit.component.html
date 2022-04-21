@@ -1,0 +1,15 @@
+
+<div class="tabs">
+  <button [ngClass]="{'activeTab': showPurchaseTicket}" (click)="toggle('purchase')">Airline Tickets</button>
+  <button [ngClass]="{'activeTab': !showPurchaseTicket}" (click)="toggle('manage')">Manage Tokens</button>
+</div>
+
+<table *ngIf="showPurchaseTicket">
+  <tr><app-change-ticket-owner-form></app-change-ticket-owner-form></tr>
+  <tr><app-change-ticket-status-form></app-change-ticket-status-form><tr></tr>
+</table>
+
+<table *ngIf="!showPurchaseTicket">
+  <tr><app-transfer-tokens-form></app-transfer-tokens-form><tr>
+</table>
+

@@ -1,0 +1,32 @@
+<body>
+  <h4>Create Airline Ticket</h4>
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="depart">Depart</label>
+      <input type="text" class="form-control" name="depart" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="arrive">Arrive</label>
+      <input type="text" class="form-control" name="arrive" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="owner">Owner</label>
+      <select name="owner" id="owner" required ngModel>
+        <option value="x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca">Airline 1 - org3</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="text" class="form-control" name="price" required ngModel>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select name="status" id="status" required ngModel>
+        <option value="Scheduled">Scheduled</option>
+      </select>
+    </div>
+    <button [disabled]="!f.valid" type="submit" class="btn btn-success">Create Airline Ticket</button>
+  </form>
+</div>
+</body>

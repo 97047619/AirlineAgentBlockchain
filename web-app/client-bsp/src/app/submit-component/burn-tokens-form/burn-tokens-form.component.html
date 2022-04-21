@@ -1,0 +1,12 @@
+<body>
+  <h4>Burn Tokens</h4>
+<div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="text" class="form-control" name="amount" required ngModel>
+    </div>
+    <button [disabled]="!f.valid" type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+</body>

@@ -1,0 +1,15 @@
+<div class="tabs">
+  <button [ngClass]="{'activeTab': !showMintTokens}" (click)="toggle('change')">Client Related</button>
+  <button [ngClass]="{'activeTab': showMintTokens}" (click)="toggle('mint')">Manage Tokens</button>
+</div>
+
+<table *ngIf="!showMintTokens">
+  <tr><app-get-client-balance-form></app-get-client-balance-form></tr>
+  <tr><app-transfer-tokens-form></app-transfer-tokens-form><tr>
+</table>
+
+<table *ngIf="showMintTokens">
+  <tr><app-mint-tokens-form></app-mint-tokens-form></tr>
+  <tr><app-burn-tokens-form></app-burn-tokens-form></tr>
+  <tr><app-transfer-tokens-from-form></app-transfer-tokens-from-form><tr></tr>
+</table>
