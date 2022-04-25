@@ -181,9 +181,9 @@ class AirlineTicketContract extends Contract {
         const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca'
 
         if (ticketOwner === agent && ticketStatus === 'Scheduled') {
-            await ctx.stub.deleteState(airlineTicketId);
-        } else {
             throw new Error(`The airline does not have permission to delete this ticket`);
+        } else {
+            await ctx.stub.deleteState(airlineTicketId);
         }
     }
 
