@@ -1,5 +1,5 @@
 {
-    "name": "myTokens",
+    "name": "token-erc20",
     "version": "0.0.12",
     "description": "Token-ERC20 contract implemented in JavaScript",
     "main": "index.js",

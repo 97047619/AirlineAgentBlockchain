@@ -1,7 +1,7 @@
 {
-  "name": "AirlineTicket",
-  "version": "0.0.55",
-  "description": "My Smart Contract",
+  "name": "airline-ticket",
+  "version": "0.0.2",
+  "description": "Airline Ticket contract implemented in JavaScript",
   "main": "index.js",
   "engines": {
     "node": ">=8",

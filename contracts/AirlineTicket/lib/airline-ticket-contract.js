@@ -17,7 +17,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0001',
                 Depart: 'DUB',
                 Arrive: 'LHR',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -25,7 +25,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0002',
                 Depart: 'LHR',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 200,
                 Status: 'Scheduled',
             },
@@ -33,7 +33,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0003',
                 Depart: 'DUB',
                 Arrive: 'DXB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 450,
                 Status: 'Scheduled',
             },
@@ -41,7 +41,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0004',
                 Depart: 'DXB',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -49,7 +49,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0005',
                 Depart: 'BFS',
                 Arrive: 'LGW',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 100,
                 Status: 'Scheduled',
             },
@@ -57,7 +57,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0006',
                 Depart: 'LGW',
                 Arrive: 'BFS',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 50,
                 Status: 'Scheduled',
             },
@@ -65,7 +65,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0007',
                 Depart: 'DUB',
                 Arrive: 'SFO',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 350,
                 Status: 'Scheduled',
             },
@@ -73,7 +73,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0008',
                 Depart: 'SFO',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -81,7 +81,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0009',
                 Depart: 'DUB',
                 Arrive: 'ATL',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 450,
                 Status: 'Scheduled',
             },
@@ -89,7 +89,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0010',
                 Depart: 'ATL',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -178,7 +178,7 @@ class AirlineTicketContract extends Contract {
         const ticket = JSON.parse(ticketString);
         const ticketOwner = ticket.Owner;
         const ticketStatus = ticket.Status;
-        const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca'
+        const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=agent1ca-ca'
 
         if (ticketOwner === agent && ticketStatus === 'Scheduled') {
             throw new Error(`The airline does not have permission to delete this ticket`);
@@ -200,11 +200,11 @@ class AirlineTicketContract extends Contract {
         // 2. check agent balance
         // 3. if balance >= price then transfer ticket to Agent name and transfer tokens from Agent to Airline
 
-        // cross-check balance of new owner on myTokens smart contract on channel1
+        // cross-check balance of new owner on token-erc20 smart contract on channel1
         
         // cc1Res is going to contain an int
         const cc1Args = ['BalanceOf', newOwner];
-        const cc1Res = await ctx.stub.invokeChaincode('myTokens', cc1Args, 'channel1');
+        const cc1Res = await ctx.stub.invokeChaincode('token-erc20', cc1Args, 'channel1');
         if (cc1Res.status !== 200) {
             throw new Error(cc1Res.message);
         }
@@ -216,7 +216,7 @@ class AirlineTicketContract extends Contract {
             // newowner = sender, currentowner
             const cc1Args2 = ['TransferFrom', newOwner, currentOwner, price.toString()];
             //const cc1Args2 = ['Transfer', currentOwner, price.toString()];
-            const cc1Res2 = await ctx.stub.invokeChaincode('myTokens', cc1Args2, 'channel1');
+            const cc1Res2 = await ctx.stub.invokeChaincode('token-erc20', cc1Args2, 'channel1');
             
             if (cc1Res2.status !== 200) {
                 throw new Error(cc1Res2.message);
@@ -229,7 +229,7 @@ class AirlineTicketContract extends Contract {
             throw new Error(`Agent ${newOwner} has insufficient balance ${balance} `);
         }
 
-        //response = stub.InvokeChaincode("myTokens", invokeArgs, "channel1")
+        //response = stub.InvokeChaincode("token-erc20", invokeArgs, "channel1")
 	    
         //if (response.Status != shim.OK) {
 		//    throw new Error("Failed to invoke chaincode. Got error: %s", response.Payload);
@@ -246,13 +246,13 @@ class AirlineTicketContract extends Contract {
         const currentOwner = ticket.Owner;
         const currentStatus = ticket.Status;
         const price = ticket.Price;
-        const airline = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca';
-        const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca'
+        const airline = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca';
+        const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=agent1ca-ca'
 
         if (currentOwner === agent && newStatus === 'Cancelled by Airline') {
 
             const cc1Args = ['BalanceOf', airline];
-            const cc1Res = await ctx.stub.invokeChaincode('myTokens', cc1Args, 'channel1');
+            const cc1Res = await ctx.stub.invokeChaincode('token-erc20', cc1Args, 'channel1');
             if (cc1Res.status !== 200) {
                 throw new Error(cc1Res.message);
             }
@@ -262,7 +262,7 @@ class AirlineTicketContract extends Contract {
 
                 const cc1Args2 = ['TransferFrom', airline, agent, price.toString()];
                 //const cc1Args2 = ['Transfer', currentOwner, price.toString()];
-                const cc1Res2 = await ctx.stub.invokeChaincode('myTokens', cc1Args2, 'channel1');
+                const cc1Res2 = await ctx.stub.invokeChaincode('token-erc20', cc1Args2, 'channel1');
                 
                 if (cc1Res2.status !== 200) {
                     throw new Error(cc1Res2.message);
@@ -283,7 +283,7 @@ class AirlineTicketContract extends Contract {
             const decreasedPice = price - percent;
 
             const cc1Args = ['BalanceOf', airline];
-            const cc1Res = await ctx.stub.invokeChaincode('myTokens', cc1Args, 'channel1');
+            const cc1Res = await ctx.stub.invokeChaincode('token-erc20', cc1Args, 'channel1');
             if (cc1Res.status !== 200) {
                 throw new Error(cc1Res.message);
             }
@@ -293,7 +293,7 @@ class AirlineTicketContract extends Contract {
             
                 const cc1Args2 = ['TransferFrom', airline, agent, decreasedPice.toString()];
                 //const cc1Args2 = ['Transfer', currentOwner, decreasedPice.toString()];
-                const cc1Res2 = await ctx.stub.invokeChaincode('myTokens', cc1Args2, 'channel1');
+                const cc1Res2 = await ctx.stub.invokeChaincode('token-erc20', cc1Args2, 'channel1');
                 
                 if (cc1Res2.status !== 200) {
                     throw new Error(cc1Res2.message);
