@@ -1,6 +1,6 @@
 {
     "name": "token-erc20",
-    "version": "0.0.12",
+    "version": "0.0.2",
     "description": "Token-ERC20 contract implemented in JavaScript",
     "main": "index.js",
     "engines": {

@@ -287,9 +287,9 @@ class TokenERC20Contract extends Contract {
      */
     async Mint(ctx, amount) {
 
-        // Check minter authorization - this sample assumes Org1 is the central banker with privilege to mint new tokens
+        // Check minter authorization - this sample assumes BSP is the central banker with privilege to mint new tokens
         const clientMSPID = ctx.clientIdentity.getMSPID();
-        if (clientMSPID !== 'org1msp') {
+        if (clientMSPID !== 'bspmsp') {
             throw new Error('client is not authorized to mint new tokens');
         }
 
@@ -344,9 +344,9 @@ class TokenERC20Contract extends Contract {
      */
     async Burn(ctx, amount) {
 
-        // Check minter authorization - this sample assumes Org1 is the central banker with privilege to burn tokens
+        // Check minter authorization - this sample assumes BSP is the central banker with privilege to burn tokens
         const clientMSPID = ctx.clientIdentity.getMSPID();
-        if (clientMSPID !== 'org1msp') {
+        if (clientMSPID !== 'bspmsp') {
             throw new Error('client is not authorized to mint new tokens');
         }
 
