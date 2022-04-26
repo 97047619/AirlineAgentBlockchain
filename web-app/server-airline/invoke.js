@@ -13,7 +13,7 @@ const path = require('path');
 async function main() {
     try {
         // load the network configuration
-        const ccpPath = path.resolve(__dirname, 'organizations', 'org3msp_profile.json');
+        const ccpPath = path.resolve(__dirname, 'organizations', 'airline1msp_profile.json');
         let ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new file system based wallet for managing identities.
@@ -38,10 +38,12 @@ async function main() {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        //const contract = network.getContract('AirlineTicket');
-		const contract = network.getContract('myTokens');
+        const contract = network.getContract('airline-ticket');
+		//const contract = network.getContract('token-erc20');
 		
 
+		result = await contract.submitTransaction('initLedger');
+		result = await contract.submitTransaction('getAllAirlineTickets');
 		//result = await contract.submitTransaction('changeAirlineTicketStatus', 'tkt0003', 'Delayed');
 
         // Submit the specified transaction.
@@ -52,7 +54,7 @@ async function main() {
 		//result = await contract.submitTransaction('Transfer', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca', '150');
 		
 		// from 2 to 3
-		result = await contract.submitTransaction('TransferFrom', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca', '1000');
+		//result = await contract.submitTransaction('TransferFrom', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca', '1000');
 		
         //console.log('Transaction has been submitted');
 		console.log(`Transaction has been submited, result is: ${result.toString()}`);

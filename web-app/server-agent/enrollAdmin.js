@@ -14,17 +14,13 @@ const path = require('path');
 async function main() {
     try {
         // load the network configuration
-        const ccpPath = path.resolve(__dirname, 'org2msp_profile.json');
-		//const ccpPath = path.resolve(__dirname, '..', 'organizations', 'peerOrganizations', 'org1.example.com', 'org1msp_profile.json');
+		const ccpPath = path.resolve(__dirname, 'organizations', 'agent1msp_profile.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new CA client for interacting with the CA.
         // org1
-		//const caInfo = ccp.certificateAuthorities['159.122.179.248:31472'];
-		// org2
-        const caInfo = ccp.certificateAuthorities['159.122.179.248:31296'];
-        // org3
-		//const caInfo = ccp.certificateAuthorities['159.122.179.248:32398'];
+		const caInfo = ccp.certificateAuthorities['159.122.174.247:31440'];
+		
         const caTLSCACerts = caInfo.tlsCACerts.pem;
         const ca = new FabricCAServices(caInfo.url, { trustedRoots: caTLSCACerts, verify: false }, caInfo.caName);
 
@@ -47,7 +43,7 @@ async function main() {
                 certificate: enrollment.certificate,
                 privateKey: enrollment.key.toBytes(),
             },
-            mspId: 'org2msp',
+            mspId: 'agent1msp',
             type: 'X.509',
         };
         await wallet.put('admin', x509Identity);

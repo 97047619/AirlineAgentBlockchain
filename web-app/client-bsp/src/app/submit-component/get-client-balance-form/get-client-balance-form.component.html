@@ -5,8 +5,8 @@
     <div class="form-group">
       <label for="clientId">Client ID</label>
       <select name="clientId" id="clientId" required ngModel>
-        <option value="x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca">(org2) Travel Agent 1</option>
-        <option value="x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca">(org3) Airline 1</option>
+        <option value="x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=agent1ca-ca">Travel Agent 1</option>
+        <option value="x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca">Airline 1</option>
       </select>
     </div>
     <button [disabled]="!f.valid" type="submit" class="btn btn-success">Submit</button>

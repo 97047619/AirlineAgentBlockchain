@@ -17,6 +17,6 @@ export class ChangeTicketOwnerFormComponent implements OnInit {
 
   async onSubmit(data) {
     console.log(data);
-    return await this.apiService.transferAirlineTicket(data.airlineTicketId, "x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca");
+    return await this.apiService.transferAirlineTicket(data.airlineTicketId, "x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=agent1ca-ca");
   }
 }

@@ -48,7 +48,7 @@ exports.transferAirlineTicket = async function(airlineTicketId, newOwner) {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('AirlineTicket');
+        const contract = network.getContract('airline-ticket');
 
         // Submit the specified transaction.
         // transferAirlineTicket transaction - requires 2 args , ex: ('transferAirlineTicket', 'tkt0001', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca')
@@ -98,7 +98,7 @@ exports.changeAirlineTicketStatus = async function(airlineTicketId, newStatus) {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('AirlineTicket');
+        const contract = network.getContract('airline-ticket');
 
         // Submit the specified transaction.
         // changeAirlineTicketStatus transaction - requires 2 args , ex: ('changeAirlineTicketStatus', 'tkt0001', 'Cancelled')
@@ -150,7 +150,7 @@ exports.getAllAirlineTickets = async function() {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('AirlineTicket');
+        const contract = network.getContract('airline-ticket');
 
         // Evaluate the specified transaction.
         // getAllAirlineTickets transaction - requires no arguments, ex: ('getAllAirlineTickets')
@@ -196,7 +196,7 @@ exports.readAirlineTicket = async function(airlineTicketId) {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('AirlineTicket');
+        const contract = network.getContract('airline-ticket');
 
         // Evaluate the specified transaction.
         // readAirlineTicket transaction - requires 1 argument, ex: 'readAirlineTicket('tkt0001')'
@@ -244,7 +244,7 @@ exports.getClientAccountBalance = async function() {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('myTokens');
+        const contract = network.getContract('token-erc20');
 
         // Evaluate the specified transaction
         const result = await contract.evaluateTransaction('ClientAccountBalance');
@@ -287,7 +287,7 @@ exports.transferTokens = async function(to, value) {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('myTokens');
+        const contract = network.getContract('token-erc20');
 
         // Submit the specified transaction.
         // transferTokens transaction - requires 2 args , ex: ('x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca', '100')

@@ -14,23 +14,14 @@ const path = require('path');
 async function main() {
     try {
         // load the network configuration
-        //const ccpPath = path.resolve(__dirname, 'org2msp_profile.json');
-		const ccpPath = path.resolve(__dirname, '..', 'organizations', 'org1msp_profile.json');
+		const ccpPath = path.resolve(__dirname, 'organizations', 'agent1msp_profile.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new CA client for interacting with the CA.
 		// Org1
-        //const caURL = ccp.certificateAuthorities['159.122.179.248:31472'].url;
-		// Create a new CA client for interacting with the CA.
-        // Org3
-		const caURL = ccp.certificateAuthorities['159.122.179.248:31296'].url;
+        const caURL = ccp.certificateAuthorities['159.122.174.247:31440'].url;
 		
         const ca = new FabricCAServices(caURL);
-
-        // Create a new CA client for interacting with the CA.
-        //const caInfo = ccp.certificateAuthorities['159.122.179.248:31472'];
-        ///const caTLSCACerts = caInfo.tlsCACerts.pem;
-        //const ca = new FabricCAServices(caInfo.url, { trustedRoots: caTLSCACerts, verify: false }, caInfo.caName);
 
         // Create a new file system based wallet for managing identities.
         const walletPath = path.join(process.cwd(), 'wallet');
@@ -71,7 +62,7 @@ async function main() {
                 certificate: enrollment.certificate,
                 privateKey: enrollment.key.toBytes(),
             },
-            mspId: 'org2msp',
+            mspId: 'agent1msp',
             type: 'X.509',
         };
         await wallet.put('user1', x509Identity);

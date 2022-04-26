@@ -14,7 +14,7 @@ const fs = require('fs');
 async function main() {
     try {
         // load the network configuration
-		const ccpPath = path.resolve(__dirname, 'organizations', 'org3msp_profile.json');
+		const ccpPath = path.resolve(__dirname, 'organizations', 'airline1msp_profile.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new file system based wallet for managing identities.
@@ -39,15 +39,15 @@ async function main() {
         const network = await gateway.getNetwork('channel1');
 
         // Get the contract from the network.
-        const contract = network.getContract('AirlineTicket');
-		//const contract = network.getContract('myTokens');
+        //const contract = network.getContract('airline-ticket');
+		const contract = network.getContract('token-erc20');
 
+
+		//result = await contract.evaluateTransaction('getAllAirlineTickets');
         // Evaluate the specified transaction.
-		
-		const result = await contract.evaluateTransaction('getAllAirlineTickets');
 		//const result = await contract.evaluateTransaction('readAirlineTicket', 'tkt0072');
-		//const result = await contract.evaluateTransaction('TotalSupply');
-        //const result1 = await contract.evaluateTransaction('ClientAccountID');
+		//const result = await contract.evaluateTransaction('getAllClientAccountBalances');
+        const result1 = await contract.evaluateTransaction('ClientAccountID');
 		//const result2 = await contract.evaluateTransaction('ClientAccountBalance');
 		//const result3 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org1ca-ca');
 		//const result4 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca');
@@ -55,8 +55,8 @@ async function main() {
 		//const result6 = await contract.evaluateTransaction('TotalSupply');
         
         
-		console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
-		//console.log(`Transaction has been evaluated, result1 ClientAccountID is: ${result1.toString()}`);
+		//console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
+		console.log(`Transaction has been evaluated, result1 ClientAccountID is: ${result1.toString()}`);
 		//console.log(`Transaction has been evaluated, result2 ClientAccountBalance is: ${result2.toString()}`);
 		//console.log(`Transaction has been evaluated, result3 org1ca is: ${result3.toString()}`);
 		//console.log(`Transaction has been evaluated, result4 org2ca is: ${result4.toString()}`);

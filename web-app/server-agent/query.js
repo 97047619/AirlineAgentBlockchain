@@ -14,7 +14,7 @@ const fs = require('fs');
 async function main() {
     try {
         // load the network configuration
-		const ccpPath = path.resolve(__dirname, 'organizations', 'org2msp_profile.json');
+		const ccpPath = path.resolve(__dirname, 'organizations', 'agent1msp_profile.json');
         const ccp = JSON.parse(fs.readFileSync(ccpPath, 'utf8'));
 
         // Create a new file system based wallet for managing identities.
@@ -40,26 +40,26 @@ async function main() {
 
         // Get the contract from the network.
         //const contract = network.getContract('AirlineTicket');
-		const contract = network.getContract('myTokens');
+		const contract = network.getContract('token-erc20');
 
         // Evaluate the specified transaction.
 		//const result = await contract.evaluateTransaction('readAirlineTicket', 'tkt0072');
-		const result = await contract.evaluateTransaction('TotalSupply');
+		//const result = await contract.evaluateTransaction('getAllClientAccountBalances');
         const result1 = await contract.evaluateTransaction('ClientAccountID');
-		const result2 = await contract.evaluateTransaction('ClientAccountBalance');
-		const result3 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org1ca-ca');
-		const result4 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca');
-		const result5 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca');
-		const result6 = await contract.evaluateTransaction('TotalSupply');
+		//const result2 = await contract.evaluateTransaction('ClientAccountBalance');
+		//const result3 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org1ca-ca');
+		//const result4 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org2ca-ca');
+		//const result5 = await contract.evaluateTransaction('BalanceOf', 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=org3ca-ca');
+		//const result6 = await contract.evaluateTransaction('TotalSupply');
         
         
 		//console.log(`Transaction has been evaluated, result is: ${result.toString()}`);
 		console.log(`Transaction has been evaluated, result1 ClientAccountID is: ${result1.toString()}`);
-		console.log(`Transaction has been evaluated, result2 ClientAccountBalance is: ${result2.toString()}`);
-		console.log(`Transaction has been evaluated, result3 org1ca is: ${result3.toString()}`);
-		console.log(`Transaction has been evaluated, result4 org2ca is: ${result4.toString()}`);
-		console.log(`Transaction has been evaluated, result5 org3ca is: ${result5.toString()}`);
-		console.log(`Transaction has been evaluated, result6 TotalSupply is: ${result6.toString()}`);
+		//console.log(`Transaction has been evaluated, result2 ClientAccountBalance is: ${result2.toString()}`);
+		//console.log(`Transaction has been evaluated, result3 org1ca is: ${result3.toString()}`);
+		//console.log(`Transaction has been evaluated, result4 org2ca is: ${result4.toString()}`);
+		//console.log(`Transaction has been evaluated, result5 org3ca is: ${result5.toString()}`);
+		//console.log(`Transaction has been evaluated, result6 TotalSupply is: ${result6.toString()}`);
 
         // Disconnect from the gateway.
         await gateway.disconnect();
