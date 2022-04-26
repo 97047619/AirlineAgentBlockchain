@@ -17,7 +17,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0001',
                 Depart: 'DUB',
                 Arrive: 'LHR',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -25,7 +25,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0002',
                 Depart: 'LHR',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 200,
                 Status: 'Scheduled',
             },
@@ -33,7 +33,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0003',
                 Depart: 'DUB',
                 Arrive: 'DXB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 450,
                 Status: 'Scheduled',
             },
@@ -41,7 +41,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0004',
                 Depart: 'DXB',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -49,7 +49,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0005',
                 Depart: 'BFS',
                 Arrive: 'LGW',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 100,
                 Status: 'Scheduled',
             },
@@ -57,7 +57,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0006',
                 Depart: 'LGW',
                 Arrive: 'BFS',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 50,
                 Status: 'Scheduled',
             },
@@ -65,7 +65,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0007',
                 Depart: 'DUB',
                 Arrive: 'SFO',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 350,
                 Status: 'Scheduled',
             },
@@ -73,7 +73,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0008',
                 Depart: 'SFO',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -81,7 +81,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0009',
                 Depart: 'DUB',
                 Arrive: 'ATL',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 450,
                 Status: 'Scheduled',
             },
@@ -89,7 +89,7 @@ class AirlineTicketContract extends Contract {
                 ID: 'tkt0010',
                 Depart: 'ATL',
                 Arrive: 'DUB',
-                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca',
+                Owner: 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca',
                 Price: 300,
                 Status: 'Scheduled',
             },
@@ -246,7 +246,7 @@ class AirlineTicketContract extends Contract {
         const currentOwner = ticket.Owner;
         const currentStatus = ticket.Status;
         const price = ticket.Price;
-        const airline = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=airline1ca-ca';
+        const airline = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=peerairline1-ca';
         const agent = 'x509::/OU=client/CN=user1::/C=US/ST=North Carolina/O=Hyperledger/OU=Fabric/CN=agent1ca-ca'
 
         if (currentOwner === agent && newStatus === 'Cancelled by Airline') {
