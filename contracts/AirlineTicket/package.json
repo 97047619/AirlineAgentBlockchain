@@ -1,6 +1,6 @@
 {
   "name": "airline-ticket",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Airline Ticket contract implemented in JavaScript",
   "main": "index.js",
   "engines": {
